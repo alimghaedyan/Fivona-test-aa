@@ -1,0 +1,99 @@
+/* =========================================================
+   فینووا ـ استایل‌های صفحه بودجه‌بندی
+   کارت‌ها، دکمه‌ها، فیلترها، فرم و حالت خالی از style.css و income.css
+   می‌آیند؛ این فایل فقط بخش‌های ویژه بودجه را اضافه می‌کند.
+   ========================================================= */
+
+/* انتخابگر ماه در سربرگ */
+.month-pick{display:flex;align-items:center;gap:6px}
+.month-pick select{appearance:none;-webkit-appearance:none;height:44px;min-width:160px;border:1px solid var(--line);border-radius:12px;padding:0 14px;background:#fff;font:inherit;font-weight:600;color:var(--ink);cursor:pointer;text-align:center}
+.month-pick select:focus{border-color:var(--blue);box-shadow:0 0 0 4px var(--blue-50);outline:0}
+.month-pick .icon-btn:disabled{opacity:.4;cursor:not-allowed}
+.month-pick .icon-btn svg{width:18px;height:18px}
+
+/* کارت‌های خلاصه */
+.kpi-val b.neg{color:var(--red)}
+.kpi.kpi-over{border-color:#fecaca;background:linear-gradient(180deg,#fff,#fffafa)}
+.kpi-bar{margin:-4px 0 12px}
+.kpi-bar span{transition:width .6s ease}
+.st-pill{display:inline-flex;align-items:center;gap:4px;font-size:11.5px;font-weight:700;padding:4px 10px;border-radius:20px;white-space:nowrap}
+.st-pill svg{width:14px;height:14px}
+
+/* نوار فیلتر */
+.toolbar.toolbar-b{grid-template-columns:minmax(220px,1.6fr) repeat(2,minmax(160px,1fr)) auto}
+.budget-card{margin-bottom:22px}
+
+/* شبکه کارت‌های بودجه */
+.bud-grid{list-style:none;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.bud-grid[hidden]{display:none}
+.bcard{border:1px solid var(--line2);border-radius:16px;padding:16px;background:#fcfdff;display:flex;flex-direction:column;gap:12px;transition:border-color .2s,box-shadow .2s}
+.bcard:hover{border-color:var(--blue-100);background:#fff;box-shadow:0 10px 24px -16px rgba(15,23,42,.25)}
+.bcard.st-over{border-color:#fecaca;background:#fffafa}
+.bcard.st-warn,.bcard.st-full{border-color:#fde68a}
+.bc-head{display:flex;align-items:flex-start;gap:10px}
+.bc-ic{width:40px;height:40px;border-radius:12px;display:grid;place-items:center;flex-shrink:0}
+.bc-ic svg{width:19px;height:19px}
+.bc-ic.sm{width:34px;height:34px;border-radius:10px}
+.bc-ic.sm svg{width:16px;height:16px}
+.bc-name{flex:1;min-width:0;display:flex;flex-direction:column;align-items:flex-start;gap:5px}
+.bc-name h3{font-size:15px;font-weight:800;line-height:1.5;display:flex;flex-wrap:wrap;align-items:center;gap:6px;overflow-wrap:anywhere}
+.bc-name h3 .demo-tag{margin:0}
+.bc-head .acts{display:flex;gap:6px;flex-shrink:0}
+.bc-prog{display:flex;align-items:center;justify-content:space-between;gap:8px}
+.bc-pct{font-size:20px;font-weight:800;font-variant-numeric:tabular-nums}
+.bcard .bar span{transition:width .6s ease}
+.bc-meta{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:0}
+.bc-meta div{background:var(--bg);border-radius:10px;padding:8px 10px;min-width:0}
+.bc-meta dt{font-size:11.5px;color:var(--ink3)}
+.bc-meta dd{margin:2px 0 0;font-size:13px;font-weight:700;font-variant-numeric:tabular-nums;white-space:nowrap}
+.bc-meta dd small{font-size:10.5px;color:var(--ink3);font-weight:500;margin-right:2px}
+.bc-meta .neg{background:var(--red-50)}
+.bc-meta .neg dt,.bc-meta .neg dd{color:var(--red)}
+.bc-over{display:flex;align-items:center;gap:6px;font-size:12.5px;font-weight:600;color:var(--red);background:var(--red-50);border-radius:10px;padding:8px 10px}
+.bc-over svg{width:16px;height:16px;flex-shrink:0}
+.bc-desc{font-size:12.5px;color:var(--ink2);line-height:1.8}
+.bc-foot{display:flex;align-items:center;justify-content:space-between;gap:8px;font-size:12px;color:var(--ink3);border-top:1px dashed var(--line);padding-top:10px;margin-top:auto;flex-wrap:wrap}
+
+/* هزینه‌های بدون بودجه */
+.unbudgeted-card{margin-bottom:22px}
+.unb-list{list-style:none;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.unb-list li{display:flex;align-items:center;gap:10px;padding:10px 12px;border:1px solid var(--line2);border-radius:12px}
+.unb-name{flex:1;min-width:0;font-weight:600;font-size:13px;display:flex;flex-direction:column}
+.unb-name small{font-weight:400;color:var(--ink3);font-size:11.5px}
+.unb-list b{font-size:13px;font-variant-numeric:tabular-nums;white-space:nowrap}
+.btn.sm{height:34px;padding:0 12px;font-size:12.5px;gap:4px}
+.btn.sm svg{width:15px;height:15px}
+
+/* فرم بودجه */
+.fld .spent-hint{color:var(--blue)}
+
+/* ویجت بودجه داشبورد */
+.bud-empty{text-align:center;padding:18px 8px;color:var(--ink2);font-size:13px;display:flex;flex-direction:column;align-items:center;gap:10px}
+.bud-more{align-self:flex-start}
+
+@media (max-width:1280px){
+  .bud-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:900px){
+  .toolbar.toolbar-b{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .toolbar.toolbar-b .field-search{grid-column:1/-1}
+  .unb-list{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:720px){
+  .bud-grid{grid-template-columns:minmax(0,1fr)}
+  .toolbar.toolbar-b{grid-template-columns:minmax(0,1fr)}
+  #view-budgets .head-actions{width:100%}
+  .month-pick{flex:1}
+  .month-pick select{flex:1;min-width:0}
+  #addBudgetBtn{width:100%;justify-content:center}
+}
+@media (max-width:560px){
+  .unb-list li{display:grid;grid-template-columns:auto minmax(0,1fr) auto;row-gap:8px}
+  .unb-list li .btn{grid-column:1/-1;justify-content:center}
+}
+@media (max-width:420px){
+  .bc-meta{grid-template-columns:minmax(0,1fr)}
+  .bc-meta div{display:flex;justify-content:space-between;align-items:center}
+  .bc-meta dd{margin:0}
+}
+#budgetForm .spent-hint:empty{display:none}

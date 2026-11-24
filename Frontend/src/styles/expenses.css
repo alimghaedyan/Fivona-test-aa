@@ -1,0 +1,53 @@
+/* =========================================================
+   فینووا ـ استایل‌های صفحه مدیریت هزینه‌ها
+   جدول، فیلترها، فرم و حالت خالی از income.css (کلاس‌های ledger-*) می‌آیند؛
+   این فایل فقط بخش‌های ویژه هزینه را اضافه می‌کند.
+   ========================================================= */
+
+/* نوار فیلتر با پنج کنترل */
+.toolbar.toolbar-5{grid-template-columns:minmax(200px,1.5fr) repeat(4,minmax(130px,1fr)) auto}
+
+/* کارت تفکیک دسته‌بندی */
+.cat-card{margin-bottom:22px}
+.cat-card .card-head{flex-wrap:wrap;gap:12px}
+.cat-body{display:grid;grid-template-columns:240px minmax(0,1fr);gap:28px;align-items:center}
+.cat-body[hidden]{display:none}
+.ex-donut{position:relative;height:240px}
+.cat-break{list-style:none;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px 22px}
+.cb-row{display:block;width:100%;text-align:right;padding:9px 10px;border-radius:12px;transition:background .2s;font:inherit;color:inherit}
+.cb-row:hover{background:var(--bg)}
+.cb-top{display:flex;align-items:center;gap:8px;font-size:13px}
+.cb-top i{width:10px;height:10px;border-radius:50%;flex-shrink:0}
+.cb-name{color:var(--ink2);font-weight:600;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.cb-amt{margin-right:auto;font-weight:700;color:var(--ink);font-variant-numeric:tabular-nums;white-space:nowrap}
+.cb-pct{min-width:46px;text-align:left;font-size:12px;color:var(--ink3);font-weight:600}
+.cb-bar{display:block;height:6px;border-radius:6px;background:var(--line2);margin-top:7px;overflow:hidden}
+.cb-bar span{display:block;height:100%;border-radius:6px;transition:width .6s ease}
+
+/* برچسب داده نمونه */
+.demo-tag{font-size:10.5px;font-weight:600;color:var(--ink3);background:var(--line2);border-radius:20px;padding:1px 8px;margin-right:6px;white-space:nowrap}
+
+/* آیکن سربرگ فرم هزینه */
+.mh-ic.red{background:var(--red-50);color:var(--red)}
+.pg-gap{min-width:24px;display:grid;place-items:center;color:var(--ink3)}
+
+@media (max-width:1280px){
+  .toolbar.toolbar-5{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .toolbar.toolbar-5 .field-search{grid-column:1/-1}
+}
+@media (max-width:1100px){
+  .cat-body{grid-template-columns:200px minmax(0,1fr);gap:20px}
+  .ex-donut{height:200px}
+  .cat-break{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:720px){
+  .toolbar.toolbar-5{grid-template-columns:minmax(0,1fr)}
+  .cat-body{grid-template-columns:minmax(0,1fr)}
+  .ex-donut{height:220px;max-width:260px;width:100%;margin:0 auto}
+  .cat-card .seg{width:100%}
+}
+
+/* داشبورد: نام‌های بلندتر دسته‌بندی هزینه در «آخرین تراکنش‌ها» شکسته شوند تا ستون عملیات بیرون نزند */
+#txBody td:nth-child(2){white-space:normal;min-width:150px}
+#txBody td:nth-child(2) .cat{line-height:1.6}
+#txBody td.desc{white-space:normal;min-width:150px}

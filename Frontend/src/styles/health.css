@@ -1,0 +1,132 @@
+/* =========================================================
+   فینووا ـ استایل‌های صفحه سلامت مالی
+   کارت‌ها، نوار پیشرفت، جدول، دکمه‌ها و حالت خالی از استایل‌های مشترک
+   می‌آیند؛ این فایل فقط بخش‌های ویژه این صفحه را اضافه می‌کند.
+   ========================================================= */
+
+.hs-top{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.25fr);gap:18px;margin-bottom:18px}
+.hs-top .card-head{flex-wrap:wrap;gap:10px}
+
+/* امتیاز کل */
+.hs-gauge-row{display:flex;align-items:center;gap:22px}
+.hs-gauge{position:relative;width:190px;height:190px;flex-shrink:0}
+.hs-gauge svg{width:100%;height:100%;transform:rotate(-90deg)}
+.hs-gauge circle{fill:none;stroke-width:14}
+.hs-gauge .g-bg{stroke:var(--line2)}
+.hs-gauge .g-fg{stroke-linecap:round;transition:stroke-dashoffset 1s cubic-bezier(.2,.8,.2,1),stroke .3s}
+.g-txt{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;text-align:center}
+.g-txt b{font-size:46px;font-weight:800;line-height:1}
+.g-txt small{font-size:12px;color:var(--ink3)}
+.g-band{display:inline-flex;align-items:center;gap:4px;font-size:12.5px;font-weight:700;padding:4px 10px;border-radius:20px;margin-top:6px}
+.g-band svg{width:14px;height:14px}
+.hs-why{flex:1;min-width:0}
+.hs-why p{font-size:13px;line-height:2;color:var(--ink2)}
+.hs-scale{list-style:none;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px 12px;margin-top:12px;font-size:11.5px;color:var(--ink3)}
+.hs-scale li{display:flex;align-items:center;gap:6px;padding:3px 6px;border-radius:8px}
+.hs-scale li i{width:9px;height:9px;border-radius:50%;flex-shrink:0}
+.hs-scale li[data-b="poor"] i{background:#ef4444}.hs-scale li[data-b="fair"] i{background:#f59e0b}
+.hs-scale li[data-b="good"] i{background:#2563eb}.hs-scale li[data-b="excellent"] i{background:#10b981}
+.hs-scale li.on{background:var(--bg);color:var(--ink);font-weight:700;box-shadow:inset 0 0 0 1.5px var(--ink3)}
+.hs-note{display:flex;gap:8px;align-items:flex-start;font-size:12px;color:var(--ink3);line-height:1.9;border-top:1px dashed var(--line);padding-top:12px;margin-top:16px}
+.hs-note svg{width:16px;height:16px;flex-shrink:0;margin-top:3px}
+
+/* تفکیک مؤلفه‌ها */
+.hs-comp-list{list-style:none;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.hc{border:1px solid var(--line2);border-radius:14px;padding:12px 14px;background:#fcfdff;display:flex;flex-direction:column;gap:9px}
+.hc-top{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.hc-ic{width:32px;height:32px;border-radius:10px;display:grid;place-items:center;background:var(--blue-50);color:var(--blue)}
+.hc-ic svg{width:16px;height:16px}
+.hc-top strong{font-size:13.5px}
+.hc-tag{font-size:11px;font-weight:700;padding:2px 8px;border-radius:20px}
+.hc-pts{margin-right:auto;font-size:18px;font-weight:800;font-variant-numeric:tabular-nums}
+.hc-pts small{font-size:11.5px;color:var(--ink3);font-weight:500}
+.hc .bar span{width:0;transition:width .7s ease}
+.hc-ok .hc-tag{background:#ecfdf5;color:#059669}.hc-ok .bar span{background:#10b981}
+.hc-mid .hc-tag{background:#fffbeb;color:#b45309}.hc-mid .bar span{background:#f59e0b}
+.hc-low .hc-tag{background:#fef2f2;color:#dc2626}.hc-low .bar span{background:#ef4444}
+.hc-na{background:repeating-linear-gradient(135deg,#fff,#fff 8px,#f8fafc 8px,#f8fafc 16px)}
+.hc-na .hc-tag{background:#f1f5f9;color:#475569}.hc-na .hc-ic{background:#f1f5f9;color:#64748b}
+.hc-txt{font-size:12.5px;color:var(--ink2);line-height:1.8}
+.hc-facts{display:grid;gap:4px;margin:0;font-size:12px}
+.hc-facts div{display:flex;justify-content:space-between;gap:8px;border-bottom:1px dashed var(--line2);padding-bottom:3px}
+.hc-facts div:last-child{border:0}
+.hc-facts dt{color:var(--ink3)}
+.hc-facts dd{margin:0;font-weight:700;font-variant-numeric:tabular-nums;text-align:left}
+.hc-warn{display:flex;gap:6px;align-items:flex-start;font-size:12px;line-height:1.8;color:#475569}
+.hc-warn svg{width:15px;height:15px;flex-shrink:0;margin-top:3px;color:#64748b}
+
+/* شاخص‌ها */
+.kpis.kpis-5{grid-template-columns:repeat(5,minmax(0,1fr))}
+.kpis-5 .kpi-val b{font-size:22px}
+.kpis-5 .kpi-label{font-size:12.5px}
+.kpis-5 .kpi-foot span{line-height:1.7}
+
+/* روند */
+.hs-trend{margin-bottom:18px}
+.hs-alert{font-size:12.5px;line-height:1.9;color:#92400e;background:#fffbeb;border:1px solid #fde68a;border-radius:12px;padding:10px 14px;margin-bottom:14px}
+.hs-charts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;margin-bottom:16px}
+.hs-charts[hidden]{display:none}
+.hs-charts figure{margin:0;min-width:0}
+.hs-charts figcaption{font-size:13px;font-weight:700;margin-bottom:8px}
+.hs-charts figcaption small{font-weight:400;color:var(--ink3)}
+.h260{height:260px}
+.hs-table{min-width:560px}
+.hs-table th[scope="row"]{font-weight:700;text-align:right;padding:12px;border-bottom:1px solid var(--line2);font-size:13px;white-space:nowrap}
+.hs-table td{font-variant-numeric:tabular-nums}
+.hs-table td.muted,.hs-table .muted{color:var(--ink3)}
+
+/* پیشنهادها و درباره محاسبه */
+.hs-bottom{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:18px;margin-bottom:22px;align-items:start}
+.hs-rec-list{list-style:none;display:flex;flex-direction:column;gap:10px}
+.rec{display:flex;gap:12px;padding:12px 14px;border-radius:14px;border:1px solid var(--line2);border-right-width:4px}
+.rec-ic{width:36px;height:36px;border-radius:11px;display:grid;place-items:center;flex-shrink:0}
+.rec-ic svg{width:18px;height:18px}
+.rec>div{min-width:0;display:flex;flex-direction:column;gap:4px;align-items:flex-start}
+.rec strong{font-size:13.5px;line-height:1.8}
+.rec p{font-size:12.5px;color:var(--ink2);line-height:1.9}
+.rec-tone{font-size:11px;font-weight:700;padding:1px 8px;border-radius:20px}
+.rec-bad{border-right-color:#ef4444}.rec-bad .rec-ic,.rec-bad .rec-tone{background:#fef2f2;color:#dc2626}
+.rec-warn{border-right-color:#f59e0b}.rec-warn .rec-ic,.rec-warn .rec-tone{background:#fffbeb;color:#b45309}
+.rec-info{border-right-color:#2563eb}.rec-info .rec-ic,.rec-info .rec-tone{background:var(--blue-50);color:var(--blue)}
+.rec-good{border-right-color:#10b981}.rec-good .rec-ic,.rec-good .rec-tone{background:#ecfdf5;color:#059669}
+.hs-about-list{list-style:none;display:flex;flex-direction:column;gap:10px;font-size:13px;line-height:1.95;color:var(--ink2)}
+.hs-about-list b{color:var(--ink)}
+.hs-details{margin-top:16px;border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.hs-details summary{cursor:pointer;display:flex;align-items:center;gap:8px;padding:12px 14px;font-weight:700;font-size:13.5px;background:var(--bg);list-style:none}
+.hs-details summary::-webkit-details-marker{display:none}
+.hs-details summary::after{content:"＋";margin-right:auto;color:var(--ink3)}
+.hs-details[open] summary::after{content:"－"}
+.hs-details summary svg{width:17px;height:17px;color:var(--blue)}
+.hs-details summary:focus-visible{outline:2px solid var(--blue);outline-offset:-2px}
+.hs-rules{padding:12px 14px;font-size:12.5px;line-height:1.95;color:var(--ink2);display:flex;flex-direction:column;gap:8px;overflow-x:auto}
+.hs-rule-table{min-width:0}
+.hs-rule-table td,.hs-rule-table th{white-space:normal;vertical-align:top;font-size:12px;line-height:1.85}
+.hs-rule-table th[scope="row"]{font-weight:700;padding:10px 12px;border-bottom:1px solid var(--line2);text-align:right;white-space:nowrap}
+
+/* داشبورد: پیوند وضعیت سلامت */
+a.grade{text-decoration:none}
+a.grade:hover{text-decoration:underline}
+
+@media (max-width:1360px){
+  .kpis.kpis-5{grid-template-columns:repeat(3,minmax(0,1fr))}
+}
+@media (max-width:1200px){
+  .hs-top,.hs-bottom{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:900px){
+  .hs-charts{grid-template-columns:minmax(0,1fr)}
+  .kpis.kpis-5{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:720px){
+  .hs-comp-list{grid-template-columns:minmax(0,1fr)}
+  .hs-gauge-row{flex-direction:column;align-items:stretch}
+  .hs-gauge{margin:0 auto;width:170px;height:170px}
+  .g-txt b{font-size:40px}
+  .hs-period{width:100%}
+  .h260{height:230px}
+}
+@media (max-width:480px){
+  .kpis.kpis-5{grid-template-columns:minmax(0,1fr)}
+  .hs-scale{grid-template-columns:minmax(0,1fr)}
+  .rec{flex-direction:column}
+}

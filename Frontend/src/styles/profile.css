@@ -1,0 +1,137 @@
+/* ===== فینووا ـ پروفایل کاربری و تنظیمات ===== */
+.user-meta span{color:var(--ink3);font-weight:500}
+.user img{object-fit:cover;background:var(--blue-50)}
+
+#view-profile .card{margin-bottom:20px}
+.pf-overview{display:grid;grid-template-columns:auto 1fr auto;gap:22px;align-items:center}
+.pf-avatar{position:relative;width:104px;height:104px;flex-shrink:0}
+.pf-avatar img{width:104px;height:104px;border-radius:50%;object-fit:cover;background:var(--blue-50);border:4px solid #fff;box-shadow:0 0 0 1px var(--line),0 10px 24px -10px rgba(37,99,235,.35)}
+.pf-avatar-btn{position:absolute;bottom:2px;left:2px;width:34px;height:34px;border-radius:50%;display:grid;place-items:center;background:var(--blue);color:#fff;border:3px solid #fff;transition:transform .2s}
+.pf-avatar-btn:hover{transform:scale(1.07)}
+.pf-avatar-btn svg{width:16px;height:16px}
+.pf-avatar-btn:focus-visible,.pf-radio input:focus-visible+span,.pf-check input:focus-visible{outline:3px solid var(--blue-100);outline-offset:2px}
+.pf-ov-body{min-width:0}
+.pf-ov-title{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:6px}
+.pf-ov-title h2{font-size:20px;font-weight:800}
+.pf-ov-title h2.muted{color:var(--ink3);font-weight:600}
+.pf-badge{display:inline-flex;align-items:center;gap:5px;font-size:11.5px;font-weight:600;padding:3px 10px;border-radius:20px;background:var(--blue-50);color:var(--blue);white-space:nowrap}
+.pf-badge svg{width:13px;height:13px}
+.pf-badge.demo{background:var(--amber-50);color:#b45309}
+.pf-badge.warn{background:var(--amber-50);color:#b45309}
+.pf-ov-line{font-size:13px;color:var(--ink2);display:flex;align-items:center;gap:6px;margin-top:2px}
+.pf-ov-line svg{width:15px;height:15px;color:var(--ink3)}
+.pf-ov-email bdi{overflow-wrap:anywhere}
+.pf-ov-bio{font-size:13px;color:var(--ink2);margin-top:8px;line-height:1.9;max-width:62ch}
+.pf-ov-meta{font-size:12px;color:var(--ink3);margin-top:8px}
+.pf-ov-actions{display:flex;flex-direction:column;gap:8px;align-self:start}
+.pf-ov-actions .btn{justify-content:center;white-space:nowrap}
+
+.pf-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:start}
+.pf-grid>.card{margin-bottom:20px}
+.pf-card .card-head h2 svg{color:var(--blue)}
+
+/* فرم */
+.pf-form-foot{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-top:8px;padding-top:14px;border-top:1px dashed var(--line)}
+.pf-dirty{font-size:12px;color:var(--ink3)}
+.pf-dirty.on{color:#b45309;font-weight:600}
+.pf-form-btns{display:flex;gap:8px}
+.btn:disabled{opacity:.5;cursor:not-allowed;box-shadow:none;transform:none}
+#pfEmail{text-align:left}
+#pfEmail::placeholder{text-align:right}
+
+/* تنظیمات */
+.pf-set{border:0;padding:14px 0;border-bottom:1px solid var(--line2);min-width:0}
+.pf-set:last-child{border-bottom:0;padding-bottom:0}
+.pf-set:first-of-type{padding-top:0}
+.pf-set legend,.pf-set strong{font-size:13.5px;font-weight:700;color:var(--ink);padding:0;display:block}
+.pf-set-desc{font-size:12px;color:var(--ink3);margin-top:4px;line-height:1.85}
+.pf-set-row{display:flex;justify-content:space-between;align-items:flex-start;gap:16px}
+.pf-fixed{flex-shrink:0;font-size:12px;font-weight:700;color:var(--ink2);background:var(--line2);border:1px solid var(--line);padding:4px 12px;border-radius:20px;white-space:nowrap}
+.pf-radios{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px}
+.pf-radios-3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.pf-radio{position:relative;cursor:pointer}
+.pf-radio input{position:absolute;opacity:0;inset:0;cursor:pointer}
+.pf-radio span{display:flex;flex-direction:column;gap:2px;border:1.5px solid var(--line);border-radius:12px;padding:10px 14px;transition:all .2s}
+.pf-radio b{font-size:13px}
+.pf-radios-3 .pf-radio b{display:flex;align-items:center;gap:6px}
+.pf-radios-3 .pf-radio b svg{width:15px;height:15px;flex-shrink:0}
+.pf-radio em{font-style:normal;font-size:12.5px;color:var(--ink2)}
+.pf-radio:hover span{border-color:var(--blue-100)}
+.pf-radio input:checked+span{border-color:var(--blue);background:var(--blue-50);box-shadow:0 0 0 3px var(--blue-50)}
+.pf-radio input:checked+span b{color:var(--blue)}
+
+/* داده‌ها */
+.pf-note{display:flex;gap:12px;align-items:flex-start;background:var(--blue-50);border:1px solid var(--blue-100);border-radius:14px;padding:14px 16px;margin-bottom:16px}
+.pf-note svg{color:var(--blue);flex-shrink:0;margin-top:3px}
+.pf-note p{font-size:13px;line-height:1.95;color:var(--ink2)}
+.pf-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:16px}
+.pf-stats>div{background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:12px 14px;min-width:0}
+.pf-stats dt{font-size:11.5px;color:var(--ink3);margin-bottom:4px}
+.pf-stats dd b{display:block;font-size:15px;font-weight:800}
+.pf-stats dd small{font-size:11.5px;color:var(--ink3)}
+.pf-actions{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.pf-action{display:flex;flex-direction:column;align-items:flex-start;gap:8px;border:1px solid var(--line);border-radius:14px;padding:16px}
+.pf-action h3{font-size:14px;font-weight:700}
+.pf-action p{font-size:12.5px;color:var(--ink2);line-height:1.9;flex:1}
+.pf-action .btn{margin-top:4px}
+.pf-action-ic{width:38px;height:38px;border-radius:11px;display:grid;place-items:center;background:var(--blue-50);color:var(--blue)}
+.pf-action.danger{border-color:#fecaca;background:#fffafa}
+.pf-action.danger .pf-action-ic{background:var(--red-50);color:var(--red)}
+.btn.danger-ghost{background:#fff;border:1px solid #fca5a5;color:#dc2626}
+.btn.danger-ghost:hover{background:var(--red-50);border-color:var(--red)}
+.pf-import-err{flex:none!important;font-size:12px!important;color:#b91c1c!important;background:var(--red-50);border-radius:10px;padding:8px 10px;width:100%}
+
+/* امنیت و درباره */
+.pf-list{list-style:none;display:flex;flex-direction:column;gap:12px}
+.pf-list li{display:flex;gap:10px;align-items:flex-start;font-size:13px;color:var(--ink2);line-height:1.9}
+.pf-list svg{flex-shrink:0;color:var(--ink3);margin-top:4px}
+.pf-about-desc{font-size:13px;color:var(--ink2);line-height:2}
+.pf-sub{font-size:13px;font-weight:700;margin:14px 0 8px}
+.pf-features{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:6px}
+.pf-features a{display:flex;align-items:center;gap:8px;font-size:12.5px;color:var(--ink2);padding:7px 10px;border-radius:10px;border:1px solid var(--line2);transition:all .2s}
+.pf-features a:hover{border-color:var(--blue-100);color:var(--blue);background:var(--blue-50)}
+.pf-features svg{width:15px;height:15px;color:var(--blue);flex-shrink:0}
+.pf-about-meta{font-size:12px;color:var(--ink3);margin-top:14px;padding-top:12px;border-top:1px dashed var(--line)}
+
+/* پنجره‌ها */
+.pf-dlg-avatar{display:block;width:140px;height:140px;border-radius:50%;object-fit:cover;margin:16px auto 12px;border:4px solid #fff;box-shadow:0 0 0 1px var(--line),0 12px 28px -12px rgba(37,99,235,.4)}
+.pf-dlg-info{font-size:12.5px;color:var(--ink2)}
+.pf-dlg-note{font-size:12px;color:var(--ink3);margin:8px 0 4px;line-height:1.85}
+.pf-preview{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:4px 0 14px}
+.pf-preview>div{background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:10px 12px}
+.pf-preview dt{font-size:11.5px;color:var(--ink3);margin-bottom:3px}
+.pf-preview dd{font-size:13px;font-weight:600}
+.pf-warn{font-size:12.5px;color:#991b1b;background:var(--red-50);border:1px solid #fecaca;border-radius:12px;padding:10px 12px;line-height:1.9;text-align:right}
+.pf-clear-card{max-width:460px}
+#clearDlgMsg>p:first-child{font-size:13px;color:var(--ink2);margin:6px 0 8px}
+.pf-clear-list{text-align:right;font-size:13px;color:var(--ink2);margin:0 18px 12px;line-height:2}
+.pf-check{display:flex;gap:10px;align-items:flex-start;text-align:right;font-size:13px;font-weight:600;margin:14px 0 4px;cursor:pointer}
+.pf-check input{width:18px;height:18px;margin-top:3px;accent-color:var(--red);flex-shrink:0}
+.pf-clear-actions{flex-wrap:wrap}
+#importDialog .modal-actions{flex-wrap:wrap}
+
+@media (max-width:1100px){
+  .pf-stats{grid-template-columns:repeat(2,1fr)}
+  .pf-actions{grid-template-columns:1fr}
+}
+@media (max-width:980px){
+  .pf-grid{grid-template-columns:1fr;gap:0}
+  .pf-overview{grid-template-columns:auto 1fr}
+  .pf-ov-actions{grid-column:1/-1;flex-direction:row;flex-wrap:wrap}
+}
+@media (max-width:560px){
+  .pf-overview{grid-template-columns:1fr;justify-items:center;text-align:center}
+  .pf-ov-title,.pf-ov-line{justify-content:center}
+  .pf-ov-bio{margin-inline:auto}
+  .pf-ov-actions{flex-direction:column;width:100%}
+  .pf-ov-actions .btn{width:100%}
+  .pf-radios,.pf-features,.pf-preview{grid-template-columns:1fr}
+  .pf-stats{grid-template-columns:1fr 1fr}
+  .pf-set-row{flex-direction:column;gap:8px}
+  .pf-form-foot{flex-direction:column;align-items:stretch}
+  .pf-form-btns{flex-direction:column-reverse}
+  .pf-form-btns .btn{width:100%;justify-content:center}
+  .pf-action .btn{width:100%;justify-content:center}
+  .pf-clear-actions .btn,#importDialog .modal-actions .btn{width:100%;justify-content:center}
+}
+.pf-clear-backup{width:100%;justify-content:center;margin-top:12px}
